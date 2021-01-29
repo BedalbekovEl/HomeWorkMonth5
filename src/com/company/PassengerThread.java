@@ -15,10 +15,11 @@ public class PassengerThread extends Thread{
 
     public void run(){
         try {
-            System.out.println(this.getName() + " Пассажир пришел на кассу ");
+            System.out.println(this.getName() + " Пассажир пришел на вокзал ");
             semaphore.acquire();
+            sleep(5000);
             System.out.println(this.getName() + " Пассажир покупает билет ");
-            sleep(2000);
+            sleep(5000);
             System.out.println(this.getName() + " Пассажир купил билет ");
             semaphore.release();
             countDownLatch.countDown();

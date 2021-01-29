@@ -17,9 +17,9 @@ public class PassengerThread extends Thread{
         try {
             System.out.println(this.getName() + " Пассажир пришел на вокзал ");
             semaphore.acquire();
-            sleep(5000);
+            sleep(2000);
             System.out.println(this.getName() + " Пассажир покупает билет ");
-            sleep(5000);
+            sleep(2000);
             System.out.println(this.getName() + " Пассажир купил билет ");
             semaphore.release();
             countDownLatch.countDown();
